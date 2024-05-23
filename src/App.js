@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import products from './products';
+import Product from './products';
 import './App.css';
 
 function App() {
+  console.log(products); // Debugging: Überprüfen Sie, ob die Produkte geladen werden
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Mein Shop</h1>
+      <div className="product-list">
+        {products.map((product, index) => (
+          <Product
+            key={index}
+            name={product.name}
+            price={product.price}
+            imageURL={product.imageURL}
+            quantity={product.quantity}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
 export default App;
+
+

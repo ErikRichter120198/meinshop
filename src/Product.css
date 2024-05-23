@@ -1,0 +1,23 @@
+/* src/Product.css */
+.product {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  margin: 16px 0;
+}
+
+.product p {
+  margin: 8px 0;
+}
